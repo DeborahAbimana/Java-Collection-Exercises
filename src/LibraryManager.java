@@ -10,7 +10,6 @@ public class LibraryManager {
         this.books = new ArrayList<>();
     }
 
-    // ADD BOOK
     public void addBook(Book book) {
 
         if (book.getAuthor().isEmpty()
@@ -45,13 +44,13 @@ public class LibraryManager {
     }
 
 
-    // GET ALL BOOKS
+
     public List<Book> getBooks() {
         return books;
     }
 
 
-    // SEARCH BOOK BY ID
+    
     public Book searchById(int id) {
 
         for (Book currentBook : books) {
@@ -65,7 +64,7 @@ public class LibraryManager {
     }
 
 
-    // SEARCH BOOK BY TITLE
+    
     public List<Book> searchByTitle(String title) {
 
         List<Book> sametitle = new ArrayList<>();
@@ -81,7 +80,7 @@ public class LibraryManager {
     }
 
 
-    // SEARCH BOOK BY AUTHOR
+    
     public List<Book> searchByAuthor(String authorname) {
 
         List<Book> sameAuthor = new ArrayList<>();
@@ -97,7 +96,7 @@ public class LibraryManager {
     }
 
 
-    // FILTER BY CATEGORY
+
     public List<Book> filterByCategory(String category) {
 
         List<Book> categorizedBook = new ArrayList<>();
@@ -113,7 +112,7 @@ public class LibraryManager {
     }
 
 
-    // UPDATE BOOK
+    
     public void updateBook(int id, String category, boolean available) {
 
         Book book = searchById(id);
@@ -132,7 +131,7 @@ public class LibraryManager {
     }
 
 
-    // REMOVE BOOK BY ID
+    
     public void removeBook(int id) {
 
         Book book = searchById(id);
@@ -150,7 +149,7 @@ public class LibraryManager {
     }
 
 
-    // BORROW BOOK
+    
     public void borrowBook(int id) {
 
         Book book = searchById(id);
@@ -179,11 +178,6 @@ public class LibraryManager {
     }
 
 
-    // ==================================================
-    // QUESTION 17
-    // REMOVE BOOKS MARKED FOR WITHDRAWAL
-    // ==================================================
-
     public void removeWithdrawnBooks() {
 
         Iterator<Book> iterator = books.iterator();
@@ -204,16 +198,13 @@ public class LibraryManager {
     }
 
 
-    // ==================================================
-    // QUESTION 18
-    // CHECK AVAILABILITY
-    // ==================================================
+    
 
     public void checkAvailability(int id) {
 
         Book book = searchById(id);
 
-        // Check if the book exists
+        
         if (book == null) {
 
             System.out.println(
@@ -223,7 +214,7 @@ public class LibraryManager {
             return;
         }
 
-        // Check if the book is available
+        
         if (book.isAvailable()) {
 
             System.out.println(

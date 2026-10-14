@@ -6,7 +6,7 @@ public class Book {
     private String category;
     private boolean available;
 
-    // Used for Question 17
+    
     private boolean markedForWithdrawal;
 
     public Book(int id, String title, String author, String category, boolean available) {
@@ -16,7 +16,7 @@ public class Book {
         this.category = category;
         this.available = available;
 
-        // By default, a book is not marked for withdrawal
+        
         this.markedForWithdrawal = false;
     }
 
@@ -60,7 +60,7 @@ public class Book {
         this.category = category;
     }
 
-    // Question 17
+    
     public boolean isMarkedForWithdrawal() {
         return markedForWithdrawal;
     }

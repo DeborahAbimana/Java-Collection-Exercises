@@ -46,10 +46,6 @@ public class Main {
         LibraryManager libraryManager = new LibraryManager();
 
 
-        // ==========================================
-        // ADD BOOKS
-        // ==========================================
-
         System.out.println("Adding books:");
 
         libraryManager.addBook(fictionBook);
@@ -66,7 +62,7 @@ public class Main {
         System.out.println(libraryManager.getBooks());
 
 
-        // Add history book
+        
 
         libraryManager.addBook(historyBook);
 
@@ -75,9 +71,7 @@ public class Main {
         System.out.println(libraryManager.getBooks());
 
 
-        // ==========================================
-        // FILTER BY CATEGORY
-        // ==========================================
+        
 
         System.out.println("\nBooks in Fiction category:");
 
@@ -86,9 +80,7 @@ public class Main {
         );
 
 
-        // ==========================================
-        // UPDATE BOOK
-        // ==========================================
+        
 
         System.out.println("\nUpdating book with ID 3:");
 
@@ -103,9 +95,7 @@ public class Main {
         );
 
 
-        // ==========================================
-        // REMOVE BOOK BY ID
-        // ==========================================
+        
 
         libraryManager.removeBook(1);
 
@@ -118,9 +108,7 @@ public class Main {
         );
 
 
-        // ==========================================
-        // BORROW BOOK
-        // ==========================================
+
 
         System.out.println("\nBorrowing book with ID 2:");
 
@@ -131,35 +119,28 @@ public class Main {
         );
 
 
-        // Try to borrow the same book again
+        
 
         System.out.println("\nTrying to borrow book 2 again:");
 
         libraryManager.borrowBook(2);
 
 
-        // ==========================================
-        // QUESTION 18
-        // CHECK AVAILABILITY
-        // ==========================================
+
 
         System.out.println("\nQUESTION 18 - CHECK AVAILABILITY:");
 
-        // Check book ID 2
+        
         libraryManager.checkAvailability(2);
 
-        // Check a book that does not exist
+        
         libraryManager.checkAvailability(50);
 
 
-        // ==========================================
-        // QUESTION 17
-        // REMOVE WITHDRAWN BOOKS
-        // ==========================================
-
+        
         System.out.println("\nQUESTION 17 - REMOVE WITHDRAWN BOOKS:");
 
-        // Mark THE GLOBE for withdrawal
+        
         geographBook.setMarkedForWithdrawal(true);
 
 
@@ -172,8 +153,7 @@ public class Main {
         );
 
 
-        // Remove books marked for withdrawal
-
+        
         libraryManager.removeWithdrawnBooks();
 
 
